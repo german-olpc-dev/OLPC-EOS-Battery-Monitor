@@ -42,8 +42,7 @@ en `/etc/os-release`.
 1. Descarga el script en tu carpeta personal:
 ```bash
 cd "$HOME"
-curl -fL \
-  -o olpc-battery-monitor.sh \
+wget -O olpc-battery-monitor.sh \
   https://raw.githubusercontent.com/german-olpc-dev/OLPC-EOS-Battery-Monitor/main/olpc-battery-monitor.sh
 ```
 
