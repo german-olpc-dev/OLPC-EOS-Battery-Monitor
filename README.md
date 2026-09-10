@@ -37,6 +37,66 @@ El monitor fue diseñado para Endless OS. Puede funcionar en otras distribucione
 Linux, aunque el campo `EndlessOS` mostrará realmente el `VERSION_ID` declarado
 en `/etc/os-release`.
 
+## Instrucciones de uso en las XO Pro - EndlessOS (Proceso de revision)
+
+1. Descarga el script en tu carpeta personal:
+```bash
+cd "$HOME"
+curl -fL \
+  -o olpc-battery-monitor.sh \
+  https://raw.githubusercontent.com/german-olpc-dev/OLPC-EOS-Battery-Monitor/main/olpc-battery-monitor.sh
+```
+
+2. Dale permisos de ejecución:
+```bash
+chmod +x "$HOME/olpc-battery-monitor.sh"
+```
+
+3. Inicia el script:
+```bash
+sudo "$HOME/olpc-battery-monitor.sh"
+```
+
+4. Revisar las salidas y confirmar que la bateria almancena correctamente la carga.
+```text
+==============================================================================
+ EndlessOS Battery Diagnostic Monitor                               v1.1.2
+==============================================================================
+
+DEVICE INFORMATION                     | BATTERY INFORMATION
+---------------------------------------+--------------------------------------
+ Laptop SN:        OLPC000123           | Battery:          BAT0
+ Vendor:           OLPC                 | Battery SN:       BATT987654
+ Product:          NL3                  | Vendor:           SMP
+ EndlessOS:        6.0.5                | Model:            L20M3PG0
+ Kernel:           6.8.0-52-generic     |
+
+==============================================================================
+
+LIVE STATUS                           | SESSION
+---------------------------------------+--------------------------------------
+ Time:             2026-09-07 10:30:15 | Initial charge:   62%
+ AC Adapter:       CONNECTED           | Current charge:   63%
+ Battery status:   Charging            | Samples:          13
+ Charge:           63%                 | Interval:         5s
+ Voltage:          11.984 V            | Power min:        18.421 W
+ Current:          1.672 A              | Power max:        20.038 W
+ Power:            20.036 W (calc)     | Power samples:    13
+ Energy now:       27.421 Wh            | Voltage min:      11.842 V
+ Energy full:      43.812 Wh            | Voltage max:      11.984 V
+ Energy remaining: 16.391 Wh            |
+ Battery health:   91.3%                |
+
+==============================================================================
+ LOG FILE
+------------------------------------------------------------------------------
+ /home/olpc/battery-logs/battery_OLPC000123_20260907_102915.csv
+
+ CTRL+C to stop monitoring and generate summary
+==============================================================================
+```
+
+
 ## Instalación
 
 Clona o copia este repositorio y entra en su directorio:
